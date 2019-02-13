@@ -1,0 +1,19 @@
+public void printClassTotals()
+{
+     System.out.printf("%23s%n%23s%n", "Total Votes per Class",
+					"========================");
+     for (int row = 0; row < votes.length; row++)
+     {
+          int total = 0;
+
+	  System.out.printf("%20s", rank[row]);
+
+	  for (int col = 0; col < votes[0].length; col++)
+	  {
+               total += votes[row][col];
+          }
+	  
+	  System.out.println(": " + total);
+     }
+     System.out.println();
+}

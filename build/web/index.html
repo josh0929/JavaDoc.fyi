@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!--
+
+Description:
+
+
+@author Joshua Suarez
+
+Course: COP3337 Computer Programming II
+and open the template in the editor.
+Instructor: Greg Shaw
+File name:
+Assignment: 
+Panther ID: 6041323
+-->
+<html>
+    <head>
+        <title>JavaDoc.fyi</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse" 
+             style="top: 0; 
+             position: sticky; 
+             position: -webkit-sticky;
+             background-color: rgb(0, 0, 77);
+             border-color: rgb(0, 0, 77);
+             ">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">JavaDoc.fyi</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Page 1</a></li>
+                    <li><a href="#">Page 2</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="container">
+                <div class="col-sm-4" 
+                     style="background-color: rgb(230, 230, 230); 
+                     border-radius: 5px;
+                     top: 60px;
+                     position: sticky;
+                     position: -webkit-sticky;">
+                    <input type="text" placeholder="Search for a topic.."
+                           style="margin-top: 5px; 
+                           margin-bottom: 5px;
+                           margin-top: 15px;
+                           margin-bottom: 10px;
+                           border: 1px solid #ccc;
+                           border-radius: 5px;
+                           width: 95%;
+                           height: 35px;">
+
+                    <ul>
+                        <li>Menu Item 1</li>
+                        <li>Menu Item 2</li>
+                        <li>Menu Item 3</li>
+                        <li>Menu Item 4</li>                    
+                        <li>Menu Item 5</li>
+                        <li>Menu Item 6</li>                    
+                        <li>Menu Item 7</li>
+                    </ul>
+                </div>
+                <div class="col-sm-7" 
+                     style="background-color: rgb(230, 230, 230); 
+                     border-radius: 5px; 
+                     margin-left: 10px;">
+                    <p>
+                    <h3>
+                        <strong>Inheritance</strong><br><br>
+                    </h3>
+
+
+                    <h5>
+                        <strong>I. Subclasses, Superclasses, and Inheritance</strong>
+                    </h5><br>
+                    <p>
+                        •	Inheritance is when a new class (known as a subclass) 
+                        is created to be a new type of an existing class (known as 
+                        the superclass).<br>
+
+                        •	Subclasses are also known as "derived" classes because 
+                        they are created (or, derived) from an existing class, also 
+                        known as the "base" class.<br>
+
+                        •	Objects of a subclass automatically inherit all of the 
+                        instance variables and methods of the superclass, and add
+                        new ones to provide capabilities needed by the subclass.<br>
+
+                        •	Inheritance is known as an "is-a" relationship, since 
+                        the subclass is a new type of the superclass.<br><br>
+                    </p>
+
+                    <h5>
+                        <strong>II.	Two Ways to Differentiate a Subclass from 
+                            Its Superclass</strong>
+                    </h5><br>
+                    <p>
+                        1.	Simply add methods and instance variables to the 
+                        subclass that are not present in the superclass.<br>  
+
+                        For example, if we derive subclass Convertible from 
+                        superclass Car, the Convertible class would inherit all 
+                        the methods of the Car class (every convertible is a car!) 
+                        plus additional ones to:<br>
+                        a.	put the top up<br>
+                        b.	put the top down<br>
+                        c.	indicate whether the top is up or down<br>
+
+                        The Convertible class would also need an additional instance
+                        variable to store the status of the top.<br>
+
+                        2.	Change the behavior of an existing superclass method, 
+                        to provide a more appropriate implementation for the subclass
+                        (i.e., override the superclass method). <br> 
+
+                        E.g., in the textbook example, subclasses SavingsAccount and
+                        CheckingAccount are derived from superclass BankAccount and 
+                        inherit methods deposit() and withdraw() from it. 
+                        SavingsAccount uses the inherited methods to handle deposits
+                        and withdrawals, but CheckingAccount overrides them to 
+                        process the “transaction fees” charged with a checking 
+                        account (but not with a savings account)<br><br> 
+
+                        	The terms subclass and superclass derive from the fact 
+                        that the superclass must contain a larger number of objects. 
+                        E.g., there must be more Cars than there are Convertibles, 
+                        because every Convertible is a Car, but not every Car is a 
+                        Convertible.<br><br>
+                    </p>
+
+                    <h5>
+                        <strong>III.	The Keyword extends</strong>
+                    </h5><br>
+
+                    <p>
+                        Keyword extends is used in a class declaration to indicate 
+                        that one class is derived from another<br>
+
+                        Syntax:	class subclass-name extends superclass-name <br>
+
+                        Example:	public class CheckingAccount extends BankAccount<br><br>
+                    </p>
+
+                    <h5>
+                        <strong>IV.	"Subobjects" and Initialization</strong>
+                    </h5> <br>
+                    <p>
+                        A.	The instance variables of a superclass, inherited along 
+                        with the methods, form a subobject which is "wrapped inside" 
+                        each object of the subclass.<br>
+
+                        B.	These subobjects must be initialized, via a call to the 
+                        superclass constructor from the subclass constructor<br>
+
+                        C.	If the superclass constructor takes no arguments, it will
+                        be called automatically when a subclass object is created.<br>
+
+                        D.	Superclass constructors with arguments must be called 
+                        explicitly, from the subclass constructor (or the compiler
+                        will complain).<br>
+
+                        This is done via the super keyword, as in:<br>
+
+                        super(arg's) ;	// calls superclass constructor<br>
+
+                        E.	The call to the superclass constructor must be the first
+                        statement in the subclass constructor (or the compiler will 
+                        complain).<br><br>
+                    </p>
+
+                    <h5>
+                        <strong>V.	Calling Superclass Methods from the Subclass</strong>
+                    </h5><br>
+                    <p>
+                        A.	Since subclass objects are automatically also objects of
+                        the superclass, superclass methods may be called for them 
+                        with no special syntax or restrictions:<br>
+
+                        subclass-obj.superclass-method-name(arguments)	or,<br>
+
+                        this.superclass-method-name(arguments)<br>
+
+                        (if called from a method of the subclass)<br>
+
+                        B.	If a superclass method is overridden in the subclass, 
+                        the superclass version of the method can still be called
+                        from subclass methods, via the super keyword:<br>
+
+                        super.method-name(arguments)<br>
+
+                        	For examples of everything discussed in this document 
+                        see CH's BankAccount hierarchy - superclass BankAccount and
+                        subclasses CheckingAccount and SavingsAccount<br>
+
+                    </p>
+
+                    <code>
+                        class Ride<br>
+                        {<br>
+                        <var>private String make ; // the make of the car (e.g., "Porsche")</var><br>
+                        <var>private String color ; // the color of the car (e.g., "Pink")</var><br>
+                        <br>
+                        /**<br>
+                        * Creates a Ride object.<br>
+                        * @param make the make of the car<br>
+                        * @param color the color of the car<br>
+                        */<br>
+                        public Ride(String make, String color) <br>
+                        {<br>
+                        this.make = make ;<br>
+                        this.color = color ;<br>
+                        }<br>
+
+                        /**<br>
+                        * Paint a Ride object a new color.<br>
+                        * @param newColor the new color to paint the car<br>
+                        */<br>
+                        public void paint(String newColor) <br>
+                        {<br>
+                        color = newColor ;<br>
+                        }<br>
+                        <br>
+                        /**<br>
+                        * Convert a Ride object to a String<br>
+                        * @return a string containing the Ride's make and color<br>
+                        */<br>
+                        public String toString() <br>
+                        {<br>
+                        return color + " " + make ;<br>
+                        }<br>
+                        }<br><br>
+                    </code>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
