@@ -12,6 +12,11 @@ Purpose:
   2. Implement a searching algorithm similar to the Apache Lucene | Elastic
   searching algo used to index large amounts of textual data and efficiently
   and rapidly return when invoked.
+
+Frameworks & Tools:
+  - Java
+  - Tomcat Server
+  - Bootstrap
   
 URL:
   http://javadoc.fyi
